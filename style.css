@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e0f7fa; /* Light pale blue background for the whole body */
+}
+
+/* Header */
+header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center logo and text vertically */
+    justify-content: center; /* Center content */
+    background-color: #00796b; /* Darker teal for header */
+    color: white;
+    padding: 30px; /* Increased padding for larger header */
+    position: relative; /* Allow absolute positioning of the logo */
+}
+
+.header-content {
+    display: flex; /* Flexbox for logo and title alignment */
+    flex-grow: 1; /* Allow content to take available space */
+    justify-content: center; /* Center the text */
+}
+
+header img {
+    max-width: 100px; /* Limit logo width */
+    position: absolute; /* Position the logo absolutely */
+    left: 20px; /* Distance from the left side */
+    top: 50%; /* Center the logo vertically */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    border-radius: 10%; /* Slightly rounded corners for the logo */
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Navigation */
+nav {
+    float: left;
+    width: 20%;
+    background-color: #b2ebf2; /* Lighter blue for navigation */
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Space between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00796b; /* Dark teal link color */
+    padding: 10px;
+    display: block;
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #00796b; /* Darker teal on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Main Body */
+main {
+    float: right;
+    width: 80%; /* Main body occupies the remaining space */
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-left: 2px solid #00796b; /* Dark teal left border */
+}
+
+/* Section Headings */
+main h3 {
+    color: #004d40; /* Darker teal for headings */
+    border-bottom: 2px solid #00796b; /* Green underline */
+    padding-bottom: 5px;
+}
+
+/* Footer Section */
+footer {
+    clear: both; /* Clear floats */
+    background-color: #00796b; /* Darker teal background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px 0; /* Space between footer items */
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Inner padding */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+input[type="submit"] {
+    background-color: #00796b; /* Darker teal for submit button */
+    color: white; /* White text */
+    padding: 10px; /* Inner padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+input[type="submit"]:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav, main {
+        float: none; /* Stack on top of each other */
+        width: 100%; /* Full width */
+    }
+    header, footer {
+        text-align: left; /* Align text to left */
+    }
+}
