@@ -9,134 +9,115 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #e0f7fa; /* Light pale blue background for the whole body */
+    background-color: #E0F7E4; /* Light mint green background */
 }
 
 /* Header */
 header {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center logo and text vertically */
-    justify-content: center; /* Center content */
-    background-color: #00796b; /* Darker teal for header */
-    color: white;
-    padding: 30px; /* Increased padding for larger header */
-    position: relative; /* Allow absolute positioning of the logo */
+    background-color: #A0D7A3; /* Soft mint green */
+    color: #333;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
-
-.header-content {
-    display: flex; /* Flexbox for logo and title alignment */
-    flex-grow: 1; /* Allow content to take available space */
-    justify-content: center; /* Center the text */
-}
-
 header img {
-    max-width: 100px; /* Limit logo width */
-    position: absolute; /* Position the logo absolutely */
-    left: 20px; /* Distance from the left side */
-    top: 50%; /* Center the logo vertically */
-    transform: translateY(-50%); /* Adjust for exact centering */
-    border-radius: 10%; /* Slightly rounded corners for the logo */
+    max-width: 80px;
+    margin-right: 15px;
 }
-
 header h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
 }
 
 /* Navigation */
 nav {
-    float: left;
-    width: 20%;
-    background-color: #b2ebf2; /* Lighter blue for navigation */
-    padding: 15px;
+    width: 100%;
+    background-color: #f0f0f0; /* Light gray */
+    padding: 10px;
 }
-
 nav ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
+    text-align: center;
 }
-
 nav ul li {
-    margin-bottom: 10px; /* Space between items */
+    display: inline-block;
+    margin: 5px;
 }
-
 nav ul li a {
     text-decoration: none;
-    color: #00796b; /* Dark teal link color */
+    color: #4CAF50;
     padding: 10px;
-    display: block;
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s; /* Smooth transition */
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
-
 nav ul li a:hover {
-    background-color: #00796b; /* Darker teal on hover */
-    color: white; /* Change text color on hover */
+    background-color: #4CAF50;
+    color: white;
 }
 
-/* Main Body */
+/* Main Content */
 main {
-    float: right;
-    width: 80%; /* Main body occupies the remaining space */
-    background-color: #ffffff; /* White background */
+    width: 100%;
+    background-color: #ffffff;
     padding: 20px;
-    border-left: 2px solid #00796b; /* Dark teal left border */
+    text-align: center;
 }
-
-/* Section Headings */
 main h3 {
-    color: #004d40; /* Darker teal for headings */
-    border-bottom: 2px solid #00796b; /* Green underline */
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
     padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
-    clear: both; /* Clear floats */
-    background-color: #00796b; /* Darker teal background */
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 10px;
+    margin-top: 20px;
 }
-
 footer p {
-    margin: 5px 0; /* Space between footer items */
+    margin: 5px 0;
 }
 
 /* Form Styles */
 form {
     margin-top: 20px;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%; /* Full width inputs */
-    padding: 10px; /* Inner padding */
-    margin: 10px 0; /* Margin for spacing */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
 input[type="submit"] {
-    background-color: #00796b; /* Darker teal for submit button */
-    color: white; /* White text */
-    padding: 10px; /* Inner padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Smooth transition */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-
 input[type="submit"]:hover {
-    background-color: #004d40; /* Darker teal on hover */
+    background-color: #45a049;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav, main {
-        float: none; /* Stack on top of each other */
-        width: 100%; /* Full width */
+    header {
+        flex-direction: column;
     }
-    header, footer {
-        text-align: left; /* Align text to left */
+    nav ul li {
+        display: block; /* Stack links vertically */
+    }
+    main {
+        padding: 10px;
     }
 }
